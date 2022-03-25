@@ -1,0 +1,33 @@
+{
+  "name": "@bb/node-async",
+  "version": "1.0.1",
+  "description": "Асинхронное выполнение кода",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -fr lib",
+    "compile": "npm run clean && babel src --out-dir lib",
+    "test": "NODE_ENV=test ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-env": "0.0.6",
+    "babel-preset-react": "^6.16.0"
+  },
+  "dependencies": {
+    "ps-node": "^0.1.4"
+  },
+  "ava": {
+    "babel": "inherit",
+    "files": [
+      "test/*.spec.js"
+    ],
+    "verbose": "true",
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
+  }
+}
