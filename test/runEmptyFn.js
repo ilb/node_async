@@ -1,7 +1,4 @@
-require("babel-register");
-require("babel-polyfill");
-
-var run = require('../lib').run;
+import { run, checkResult, clearResult } from '../src';
 run(() => {})
   .then(data => console.log(data))
   .catch(err => {
